@@ -21,12 +21,9 @@ Usage: ./BinReg alpha src_img dst_img
 alpha: rotation angle
 src_img: template image
 dst_img: observed image
-example:
-./BinReg 0.1576 ../data/whole_gear_thresholded.ppm ../data/whole_gear_canny_edged.ppm
 
 Test script:
 The test script creates tested images by continuously rotating the object around its centre pi/10, 2*pi/10... 20*pi/10, finds the homography which maps template image to observed image, apply the homography transformation on the template image, measures registration errors and writes output to file.
 Place this script in the same folder as the executable ./BinaryImageRegistration and run it with the following syntax:
 ./iterative_registration_test.sh thresholded_img canny_img
-example: ./iterative_registration_test.sh ../data/whole_gear_thresholded.ppm ../data/whole_gear_canny_edged.ppm
 
